@@ -1,0 +1,51 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+<!------------------------ Page Content ------------------------------>
+
+<div class="container">
+<div class="card border-0 shadow my-5">
+<div class="card-body p-5">
+
+<h1>Matching names</h1>
+
+ <div class="col-sm-8" style="max-width: none;">
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Etymology</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><h1>{{ predictions.name[0] }}</h1></td>
+      <td>{{ predictions.meaning[0] }}</td>
+      <td><p class = "description">{{ predictions.bullshit_reduced[0] }}</p></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><h1>{{ predictions.name[1] }}</h1></td>
+      <td>{{ predictions.meaning[1] }}</td>
+      <td><p class = "description">{{ predictions.bullshit_reduced[1] }}</p></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><h1>{{ predictions.name[2] }}</h1></td>
+      <td>{{ predictions.meaning[2] }}</td>
+      <td><p class = "description">{{ predictions.bullshit_reduced[2] }}</p></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+</div>
+</div>
+<!------------------------ /Page content ------------------------------>
+
+{% endblock %}

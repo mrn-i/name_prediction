@@ -1,0 +1,53 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+<!------------------------ Page Content ------------------------------>
+
+<div class="container">
+<div class="card border-0 shadow my-5">
+<div class="card-body p-5">
+
+<h1>Find the best possible name for your baby with AI</h1>
+
+
+
+<div class="formwrapper">
+<form method="POST" action = "{{ url_for('index') }}" class="form-inline">
+  <div style="text-align: center;">
+      <div style="form-check">
+       <h3>Choose gender(s)</h3>
+
+      <div class="form-check"><div class="col-sm-12">
+    <div class="form-check">{{ form.boy }} <label class="form-check-label">{{ form.boy.label }}</label></div>
+    <div class="form-check">{{ form.girl }} <label class="form-check-label"> {{ form.girl.label }}</label></div>
+      </div></div>
+      </div>
+
+<br>
+ <div class="container">
+  <h3>Choose 5 character traits</h3>
+    <div class="form-horizontal">
+      <div class="col-sm-12">
+       {{ form.trait0 }} {{ form.trait1 }} {{ form.trait2 }} {{ form.trait3 }} {{ form.trait4 }}
+      </div>
+    </div>
+</div>
+<br>
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-12">
+     {{ form.submit }}
+    </div>
+    </div>
+      </div>
+</form>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<!------------------------ /Page content ------------------------------>
+
+{% endblock %}
